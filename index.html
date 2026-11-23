@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mentoria W/M | Capa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#04080f; --bg2:#0e1a2c; --line:#18263d; --text:#eef1f6; --muted:#9aa8bf;
+  --gold:#d4af6a; --gold2:#b8914a; --on-gold:#04080f;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans)}
+body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+.capa{
+  position:relative;width:100%;max-width:1280px;aspect-ratio:16/9;overflow:hidden;
+  background:
+    radial-gradient(60% 70% at 85% 25%, rgba(212,175,106,.16), transparent 70%),
+    linear-gradient(180deg,var(--bg),var(--bg2));
+  display:grid;grid-template-columns:1.1fr .9fr;align-items:center;
+  padding:0 5.5%;gap:3%;
+}
+.info{display:flex;flex-direction:column;align-items:flex-start;padding-bottom:6%}
+.label{font-weight:700;font-size:clamp(.65rem,1.7vw,1.4rem);color:var(--gold);letter-spacing:.02em;padding-bottom:1.4%;border-bottom:3px solid var(--gold);margin-bottom:3%}
+h1{font-family:var(--serif);font-weight:700;margin:0;line-height:.98;font-size:clamp(2.6rem,9.4vw,7.6rem);letter-spacing:-.01em}
+h1 span{display:block;color:var(--gold)}
+.tag{margin:4% 0 .6%;font-size:clamp(.85rem,2.4vw,1.9rem);font-weight:500}
+.sub{margin:0 0 4%;color:var(--muted);font-size:clamp(.7rem,1.8vw,1.45rem)}
+.btn{
+  display:inline-flex;align-items:center;gap:.7em;text-decoration:none;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--on-gold);
+  font-weight:700;font-size:clamp(.75rem,1.75vw,1.4rem);padding:.95em 1.8em;border-radius:999px;
+  box-shadow:0 12px 34px -12px var(--gold);transition:transform .15s
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.chart{width:100%;height:auto;align-self:center}
+.chart .grid{stroke:var(--line);stroke-width:1.5}
+.chart .up{fill:#22c55e;stroke:#22c55e}
+.chart .dn{fill:#ef4444;stroke:#ef4444}
+.foot{position:absolute;left:5.5%;right:5.5%;bottom:0;border-top:1px solid var(--line);padding:1.6% 0;color:var(--muted);font-size:clamp(.55rem,1.55vw,1.25rem)}
+.signup{width:100%;max-width:1280px;padding:40px 5.5% 56px;background:var(--bg2);border-top:1px solid var(--line)}
+.signup h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.6rem,3.4vw,2.4rem);line-height:1.1;margin:0 0 8px}
+.signup p.desc{margin:0 0 20px;color:var(--muted);max-width:60ch}
+.signup form{display:flex;gap:12px;flex-wrap:wrap;max-width:640px}
+.signup input{flex:1 1 260px;min-width:0;background:#0c1523;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:16px 22px;font:inherit;font-size:1rem}
+.signup input::placeholder{color:var(--muted)}
+.signup input:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-color:var(--gold)}
+.signup button{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--on-gold);font:inherit;font-weight:700;border:0;border-radius:999px;padding:16px 28px;cursor:pointer}
+.signup button:disabled{opacity:.6;cursor:wait}
+.signup .consent{flex-basis:100%;margin:2px 0 0;font-size:.82rem;color:var(--muted)}
+#msg{flex-basis:100%;margin:0;font-size:.95rem;min-height:1.4em}
+#msg.ok{color:#22c55e}
+#msg.err{color:#ef4444}
+@media (prefers-reduced-motion:no-preference){
+  .candle{transform-origin:bottom;animation:rise .7s ease-out both;animation-delay:calc(var(--i)*70ms)}
+  @keyframes rise{from{opacity:0;transform:scaleY(.2)}to{opacity:1;transform:none}}
+}
+@media (max-width:640px){
+  .capa{aspect-ratio:auto;grid-template-columns:1fr;padding:48px 24px 72px;gap:24px}
+  .info{padding-bottom:0}
+  .chart{max-width:360px;margin:0 auto}
+  .foot{position:static;margin-top:8px;padding:16px 0 0;grid-column:1}
+}
+</style>
+</head>
+<body>
+<section class="capa">
+  <div class="info">
+    <div class="label">MENTORIA EDUCACIONAL EM GRUPO</div>
+    <h1>Mentoria <span>W/M</span></h1>
+    <p class="tag">Aprenda a analisar o mercado com método.</p>
+    <p class="sub">Aprendizado em grupo com conteúdo educacional para desenvolver sua análise.</p>
+    <a class="btn" id="comprar" href="https://pay.kiwify.com.br/1vszZkr" target="_blank" rel="noopener">QUERO MINHA VAGA NA TURMA <span aria-hidden="true">→</span></a>
+  </div>
+  <svg class="chart" viewBox="0 0 400 340" role="img" aria-label="Ilustração de gráfico de candles">
+    <g class="grid"><line x1="0" y1="60" x2="400" y2="60"/><line x1="0" y1="130" x2="400" y2="130"/><line x1="0" y1="200" x2="400" y2="200"/><line x1="0" y1="270" x2="400" y2="270"/></g>
+    <g stroke-width="2.5">
+      <g class="candle" style="--i:0"><line class="dn" x1="40" y1="238" x2="40" y2="300"/><rect class="dn" x="30" y="252" width="20" height="34" rx="2"/></g>
+      <g class="candle" style="--i:1"><line class="up" x1="85" y1="205" x2="85" y2="290"/><rect class="up" x="75" y="220" width="20" height="56" rx="2"/></g>
+      <g class="candle" style="--i:2"><line class="dn" x1="130" y1="190" x2="130" y2="262"/><rect class="dn" x="120" y="206" width="20" height="40" rx="2"/></g>
+      <g class="candle" style="--i:3"><line class="up" x1="175" y1="150" x2="175" y2="240"/><rect class="up" x="165" y="166" width="20" height="62" rx="2"/></g>
+      <g class="candle" style="--i:4"><line class="up" x1="220" y1="118" x2="220" y2="196"/><rect class="up" x="210" y="130" width="20" height="54" rx="2"/></g>
+      <g class="candle" style="--i:5"><line class="dn" x1="265" y1="104" x2="265" y2="170"/><rect class="dn" x="255" y="118" width="20" height="36" rx="2"/></g>
+      <g class="candle" style="--i:6"><line class="up" x1="310" y1="70" x2="310" y2="148"/><rect class="up" x="300" y="84" width="20" height="50" rx="2"/></g>
+      <g class="candle" style="--i:7"><line class="up" x1="355" y1="32" x2="355" y2="110"/><rect class="up" x="345" y="46" width="20" height="52" rx="2"/></g>
+    </g>
+  </svg>
+  <div class="foot">Wyckoff &nbsp;•&nbsp; Dow &nbsp;•&nbsp; Elliott &nbsp;•&nbsp; Opções &nbsp;•&nbsp; Análise de mercado &nbsp;•&nbsp; Gestão de risco</div>
+</section>
+
+<section class="signup" id="informacoes">
+  <h2>Receba mais informações</h2>
+  <p class="desc">Deixe seu e-mail e receba mais informações sobre a mentoria.</p>
+  <form id="form-email" novalidate>
+    <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" autocomplete="email" required aria-label="Seu e-mail">
+    <button type="submit" id="enviar">Receber informações</button>
+    <p class="consent">Ao enviar, você autoriza o recebimento de informações sobre a mentoria neste e-mail.</p>
+    <p id="msg" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<script>
+  // Cole aqui o endereço do seu formulário (ex.: Formspree: https://formspree.io/f/xxxxxxx)
+  var FORM_URL = "https://formspree.io/f/mdegpwzl";
+
+  var form = document.getElementById("form-email");
+  var msg = document.getElementById("msg");
+  var btn = document.getElementById("enviar");
+  function show(text, cls){ msg.textContent = text; msg.className = cls || ""; }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var email = document.getElementById("email").value.trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ show("Digite um e-mail válido.", "err"); return; }
+    if(FORM_URL.indexOf("COLE_AQUI") === 0){ show("Formulário ainda não configurado.", "err"); return; }
+    btn.disabled = true; show("Enviando...");
+    var data = new FormData(); data.append("email", email);
+    fetch(FORM_URL, { method:"POST", body:data, headers:{ "Accept":"application/json" } })
+      .then(function(r){
+        if(r.ok){ form.reset(); show("Pronto! Você receberá as informações no e-mail informado.", "ok"); }
+        else { show("Não foi possível enviar. Tente novamente.", "err"); }
+      })
+      .catch(function(){ show("Não foi possível enviar. Tente novamente.", "err"); })
+      .finally(function(){ btn.disabled = false; });
+  });
+</script>
+</body>
+</html>
